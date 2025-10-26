@@ -9,4 +9,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Enable pytest to find src
 ENV PYTHONPATH=/app/src
 
-CMD ["pytest", "-vv"]
+CMD ["pytest", "-vv","-s"]
