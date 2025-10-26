@@ -1,13 +1,15 @@
 import os
 import sys
 
+# Get the root project directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
-# Construct path to 'utils' folder
-src_path = os.path.join(current_dir, 'src')
-# Add it to sys.path so Python can find it
+project_root = os.path.dirname(current_dir)
+
+# Append the src directory to sys.path
+src_path = os.path.join(project_root, 'src')
 sys.path.append(src_path)
 
-from src.math_utils import add
+from math_utils import add
 
 def test_addition():
     assert add(2,3)==5
